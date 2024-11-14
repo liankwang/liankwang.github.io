@@ -1,9 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Lian Wang</title>
+    <style>
+      /* Add CSS here */
+      body {
+        font-family:Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        color: #333;
+      }
+      main {
+        padding: 50px;
+      }
+
+      a {
+        color: #0e5e06;
+        text-decoration: none;
+      } 
+      a:hover {
+        text-decoration: underline;
+      } 
+
+
+      .profile {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+      .profile-text {
+        margin: 8px;
+      }
+      .profile img {
+        width: 200px;
+        height: auto;
+        border-radius: 1px;
+      }
+      .profile p {
+        flex: 1;
+        font-size: 1rem;
+        line-height: 1;
+        color: #333;
+        margin-bottom: 5px;
+        margin-top: 0px;
+      }
+
+
+      .section {
+        width: 100%; /* Full width for each section */
+        padding: 10px;
+        margin-top: 5px; /* Adds space below each section */
+        margin-bottom: 0px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .section h2 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      .section ul {
+        list-style-type: disc;
+        padding: 0;
+        padding-left: 20px;
+        margin-bottom: 0px;
+      }
+
+      .section li {
+        margin-bottom: 8px;
+        font-size: 1rem;
+      }
+    </style>
   </head>
+
   <body>
-    <p>Hi <a href="https://jshogrenknaak.github.io">:)</a></p>
+    <main>
+      <div class="profile">
+        <img src="images/cat.jpg" alt="cat">
+        <div class="profile-text">
+          <h1 class="name"> Lian Wang </h1>
+          <p class="email"> lianwang (at) stanford (dot) edu </p>
+          <p class="position"> Undergraduate, cat </p>
+        </div>
+      </div>
+      <div class="description">
+        <p> Hello! I am a caycatcatcatcatcat. nice</p>
+      </div>
+      <div class="section" id="papers">
+        <h2>Papers</h2>
+        <ul>
+            <li> To appear. <b>Lian Wang</b>. Covert Wh-verb Movement in Mandarin Chinese. <em>WCCFL 42</em>.</li>
+            <li> 2024. Jiayi Lu*, Jonathan Merchan*, Lian Wang*, and Judith Degen. <em>SCiL 2024</em>. <a href="https://aclanthology.org/2024.scil-1.2/"> [paper] </a></li>
+        </ul>
+     </div>
+     <div class="section" id="talks">
+      <h2>Talks</h2>
+      <ul>
+          <li> 2024. <b>Lian Wang</b>. How to feed cat. <em>WCCFL 42</em>. </li>
+          <li>Paper Title 2 - <em>Journal Name</em>, Year</li>
+      </ul>
+   </div>
+
+    </main>
   </body>
 </html>
