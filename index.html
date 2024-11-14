@@ -46,12 +46,31 @@
         margin-top: 0px;
       }
 
+      .description {
+        width: 100%;
+        left-padding: 0px;
+        margin-top: 15px; 
+        margin-bottom: 30px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .description p {
+        flex: 1;
+        font-size: 1rem;
+        line-height: 1;
+        color: #333;
+        margin-bottom: 5px;
+        margin-top: 0px;
+      }
 
       .section {
         width: 100%; /* Full width for each section */
-        padding: 10px;
-        margin-top: 5px; /* Adds space below each section */
-        margin-bottom: 0px;
+        /* padding: 10px; */
+        margin-top: 15px; /* Adds space below each section */
+        margin-bottom: 15px;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -83,27 +102,27 @@
         <img src="images/cat.jpg" alt="cat">
         <div class="profile-text">
           <h1 class="name"> Lian Wang </h1>
+          <p class="position"> Undergraduate at Stanford University </p>
           <p class="email"> lianwang (at) stanford (dot) edu </p>
-          <p class="position"> Undergraduate, cat </p>
         </div>
       </div>
       <div class="description">
-        <p> Hello! I am a caycatcatcatcatcat. nice</p>
+        <p> I am an undergrad at Stanford studying linguistics and statistics. The photo is not my cat, it is a <a href="https://www.reddit.com/r/cats/comments/17qdfqz/share_funny_close_ups_of_your_cats_ill_go_first/"> reddit</a>or's. </p>
       </div>
       <div class="section" id="papers">
         <h2>Papers</h2>
         <ul>
-            <li> To appear. <b>Lian Wang</b>. Covert Wh-verb Movement in Mandarin Chinese. <em>WCCFL 42</em>.</li>
-            <li> 2024. Jiayi Lu*, Jonathan Merchan*, Lian Wang*, and Judith Degen. <em>SCiL 2024</em>. <a href="https://aclanthology.org/2024.scil-1.2/"> [paper] </a></li>
+            <li> To appear. <b>Lian Wang</b>. Covert Wh-verb Movement in Mandarin Chinese. <em>WCCFL 42</em>. </li>
+            <li> 2024. Jiayi Lu*, Jonathan Merchan*, <b>Lian Wang</b>*, and Judith Degen. Can Syntactic Log-Odds Ratio Predict Acceptability and Satiation? <em>SCiL 2024</em>. <a href="https://aclanthology.org/2024.scil-1.2/"> [paper] </a></li>
         </ul>
      </div>
-     <div class="section" id="talks">
+    <!-- <div class="section" id="talks">
       <h2>Talks</h2>
       <ul>
+          <li> 2024. Jiayi Lu*, Jonathan Merchan*, <b>Lian Wang</b>*. How to feed cat. <em>WCCFL 42</em>. </li>
           <li> 2024. <b>Lian Wang</b>. How to feed cat. <em>WCCFL 42</em>. </li>
-          <li>Paper Title 2 - <em>Journal Name</em>, Year</li>
       </ul>
-   </div>
+    </div> -->
 
     </main>
   </body>
