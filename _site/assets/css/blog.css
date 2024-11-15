@@ -21,5 +21,7 @@
 }
   .post-date {
     margin-right: 20px;
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
+    font-weight: normal;
+    margin-left: 0.25em;
   }
