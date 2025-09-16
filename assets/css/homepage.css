@@ -1,16 +1,6 @@
 .container {
-  max-width: 700px;   /* or 600–800px depending on your taste */
-  margin: 0 auto;     /* centers the column */
   padding: 0 10px;    /* keeps text off the edges on small screens */
   box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.3; /*line height for p in default.css */
-  color: #333;
-  background-color: #f9f9f9;
-  padding: 0 20px 20px 20px;
 }
 
 .profile {
