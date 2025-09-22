@@ -14,3 +14,34 @@ layout: default
     </div>
     <div class="post-content">{{ content }}</div>
 </article>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.carousel-container').forEach(container => {
+    const track = container.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    let currentIndex = 0;
+
+    function updateSlide() {
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
+    const prevBtn = container.querySelector('.prev');
+    const nextBtn = container.querySelector('.next');
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = Math.max(0, currentIndex - 1);
+      updateSlide();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = Math.min(slides.length - 1, currentIndex + 1);
+      updateSlide();
+    });
+
+    window.addEventListener('resize', updateSlide);
+    updateSlide(); // set initial position
+  });
+});
+</script>
