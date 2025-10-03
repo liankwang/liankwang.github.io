@@ -12,11 +12,59 @@ description: "Homepage of Lian Wang"
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
-      <!-- <span class="post-date">{{ post.date | date: "%m/%d/%y" }}</span> -->
-      <div class="post-content">
-        <h3><a href="{{ post.url }}">{{ post.title }}</a>  <span class="post-date">{{ post.date | date: "(%m/%d/%y)" }}</span></h3>
-        <p>{{ post.excerpt }}</p>
-      </div>
-    </article>
+        <div class="post-date">{{ post.date | date: "%m/%d/%y" }}</div>
+        <div class="post-title">
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        </div>
+        {% if post.cover %}
+        <!-- OPTION 1: Side by side -->
+        <!--
+        <div class="post-body side">
+          <div class="post-thumbnail">
+            <a href="{{ post.url }}">
+              <img src="{{ post.cover }}" alt="Cover image for {{ post.title }}">
+            </a>
+          </div>
+          <div class="post-excerpt">
+            <p>
+              {% if post.blurb %}
+                {{ post.blurb }}
+              {% else %}
+                {{ post.excerpt }}
+              {% endif %}
+            </p>
+          </div>
+        </div>
+        -->
+        <!-- OPTION 2: Stacked -->
+        <div class="post-body stacked">
+          <div class="post-excerpt">
+            <p>
+              {% if post.blurb %}
+                {{ post.blurb }}
+              {% else %}
+                {{ post.excerpt }}
+              {% endif %}
+            </p>
+          </div>
+          <div class="post-thumbnail">
+            <a href="{{ post.url }}">
+              <img src="{{ post.cover }}" alt="Cover image for {{ post.title }}">
+            </a>
+          </div>
+        </div>
+      {% else %}
+        <div class="post-excerpt">
+          <p>
+            {% if post.blurb %}
+              {{ post.blurb }}
+            {% else %}
+              {{ post.excerpt }}
+            {% endif %}
+          </p>
+        </div>
+      {% endif %}
+      </article>
   {% endfor %}
+</div>
 </div>
