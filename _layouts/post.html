@@ -1,5 +1,6 @@
 ---
 layout: default
+excerpt_separator: "<!-- more -->"
 ---
 
 
@@ -7,10 +8,10 @@ layout: default
   <link rel="stylesheet" href="/assets/css/default.css">
   <link rel="stylesheet" href="/assets/css/post.css">
 </head>
-<article>
+<article class="post">
     <div class="title-info">
       <h1>{{ page.title }} <span class="small"> <a href="/blog/">[back]</a> </span> </h1>
-      <p class="post-date">{{ page.date | date: "%m/%d/%y" }}</p>
+      <p class="post-date">{{ page.date | date: "%b %-d, %Y" }}</p>
     </div>
     <div class="post-content">{{ content }}</div>
 </article>
@@ -20,24 +21,32 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.carousel-container').forEach(container => {
     const track = container.querySelector('.carousel-track');
     const slides = Array.from(track.children);
+    const prevBtn = container.querySelector('.prev');
+    const nextBtn = container.querySelector('.next');
+    const inner = container.querySelector('.carousel-inner');
     let currentIndex = 0;
 
     function updateSlide() {
-      const slideWidth = slides[0].getBoundingClientRect().width;
+      const slideWidth = inner.getBoundingClientRect().width; // width of visible area
       track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+      // hide/show arrows if at ends
+      prevBtn.style.display = currentIndex === 0 ? 'none' : 'block';
+      nextBtn.style.display = currentIndex === slides.length - 1 ? 'none' : 'block';
     }
 
-    const prevBtn = container.querySelector('.prev');
-    const nextBtn = container.querySelector('.next');
-
     prevBtn.addEventListener('click', () => {
-      currentIndex = Math.max(0, currentIndex - 1);
-      updateSlide();
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlide();
+      }
     });
 
     nextBtn.addEventListener('click', () => {
-      currentIndex = Math.min(slides.length - 1, currentIndex + 1);
-      updateSlide();
+      if (currentIndex < slides.length - 1) {
+        currentIndex++;
+        updateSlide();
+      }
     });
 
     window.addEventListener('resize', updateSlide);

@@ -1,8 +1,17 @@
+body {
+    font-family: "Lato", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.3;
+    font-size: 16px;
+  }
+
 
 main {
     max-width: 850px;
     margin: 0 auto; /* centers the column */
-    padding: 3rem 1rem;
     box-sizing: border-box;
   }
 
@@ -16,23 +25,21 @@ main {
   align-items: flex-start;
 }
 .post {
-  margin-bottom: 30px;
-  padding-bottom: 15px;
+  /* margin-bottom: 1em; */
+  /* padding-bottom: 15px; */
 }
 
 /* Shared */
 .post-date {
   font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 0.25rem;
+  color: #222;
+  /* margin-bottom: 0.25rem; */
 }
 
-.post-title {
-  margin-bottom: 0.25rem;
-}
+
 
 /* === Option 1: Side layout === */
-.post-body.side {
+/* .post-body.side {
   display: flex;
   gap: 20px;
   align-items: flex-start;
@@ -40,7 +47,7 @@ main {
 }
 
 .post-body.side .post-thumbnail {
-  flex: 0 0 250px; /* smaller thumbnail */
+  flex: 0 0 250px;
 }
 
 .post-body.side .post-thumbnail img {
@@ -51,30 +58,84 @@ main {
 
 .post-body.side .post-excerpt {
   flex: 1;
-}
+} */
 
 /* === Option 2: Stacked layout === */
 .post-body.stacked {
   display: block;
-  margin-top: 0;
+  margin-top: 1rem;
 }
 
 .post-body.stacked .post-thumbnail {
   width: 100%;      /* full width of the container */
   height: 300px;    /* fixed height for all photos */
   overflow: hidden; /* crop anything outside */
-  margin-top: 10px;
+  margin-top: 0.5em;
 }
 
 .post-body.stacked .post-thumbnail img {
   width: 100%;      /* fills width of container */
   height: 100%;     /* fills height of container */
   object-fit: cover; /* crops to fit the box */
-  display: block;
 }
 
 
-/* .post-body.stacked .post-excerpt {
-  padding-top: 0;
-  margin-top: 10px;
-} */
+/* Post columns layout */
+.post-body.columns {
+  display: flex;
+  gap: 3.5em;
+  align-items: flex-start;
+}
+
+.post-date-column {
+  flex: 0 0 85px;
+  text-align: right;
+  font-size: 0.85rem;
+  color: #555;
+  padding-top: 4px;
+}
+
+.post-info-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.5rem; */
+  margin-bottom: 1.25em;
+}
+
+.post-info-column .post-title {
+  margin: 0 0 0 0;
+}
+
+.post-info-column .post-thumbnail {
+  width: 100%;
+  max-height: 250px;
+  overflow: hidden;
+  /* margin-bottom: 1em; */
+}
+
+.post-info-column .post-thumbnail img {
+  /* width: 100%; */
+  max-height: 250px;
+  object-fit: cover;
+}
+
+/* Responsive: stack on narrow screens */
+@media (max-width: 700px) {
+  .post-body.columns {
+    display: flex;
+    flex-direction: column;
+    gap: .1em; /* remove any flex gap if it exists */
+    /* margin-bottom: 1em; */
+  }
+
+  .post-date-column,
+  .post-info-column {
+    flex: none;
+    text-align: left;
+  }
+
+  .post-date-column + .post-title-column {
+    margin-top: 0; /* ensure no vertical gap */
+  }
+}

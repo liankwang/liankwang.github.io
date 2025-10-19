@@ -1,30 +1,25 @@
 ---
 layout: default
-title: "Blog"
-description: "Homepage of Lian Wang"
+title: "Squib City"
+description: ""
 ---
 
 <head>
   <link rel="stylesheet" href="/assets/css/blog.css">
 </head>
 
-<h1>Squib City (v0.1) <span class="small"> <a href="../">[back]</a> </span> </h1>
+<h1>Squib City (v0.1) </h1>
+<!-- Insert this in h1 to get the [back] button: -->
+<!-- <span class="small"> <a href="../">[back]</a> </span> -->
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
-        <div class="post-date">{{ post.date | date: "%m/%d/%y" }}</div>
-        <div class="post-title">
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        </div>
-        {% if post.cover %}
-        <!-- OPTION 1: Side by side -->
-        <!--
-        <div class="post-body side">
-          <div class="post-thumbnail">
-            <a href="{{ post.url }}">
-              <img src="{{ post.cover }}" alt="Cover image for {{ post.title }}">
-            </a>
+        <!-- OPTION 1: Everything stacked -->
+        <!-- <div class="post-body stacked">
+          <div class="post-title">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
           </div>
+          <div class="post-date">{{ post.date | date: "%m/%d/%y" }}</div>
           <div class="post-excerpt">
             <p>
               {% if post.blurb %}
@@ -34,36 +29,41 @@ description: "Homepage of Lian Wang"
               {% endif %}
             </p>
           </div>
-        </div>
-        -->
-        <!-- OPTION 2: Stacked -->
-        <div class="post-body stacked">
-          <div class="post-excerpt">
-            <p>
-              {% if post.blurb %}
-                {{ post.blurb }}
-              {% else %}
-                {{ post.excerpt }}
-              {% endif %}
-            </p>
-          </div>
+          {% if post.cover %}
           <div class="post-thumbnail">
             <a href="{{ post.url }}">
               <img src="{{ post.cover }}" alt="Cover image for {{ post.title }}">
             </a>
           </div>
+          {% endif %}
+        </div> -->
+
+      <!-- OPTION 2: Date on left, text on right -->
+      <div class="post-body columns">
+        <div class="post-date-column">
+          <div class="post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
         </div>
-      {% else %}
-        <div class="post-excerpt">
-          <p>
-            {% if post.blurb %}
-              {{ post.blurb }}
-            {% else %}
-              {{ post.excerpt }}
-            {% endif %}
-          </p>
+
+        <div class="post-info-column">
+          <div class="post-title">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          </div>
+
+          {% if post.blurb != "" %}
+          <div class="post-excerpt">
+            <p> {{ post.blurb }}</p>
+          </div>
+          {% endif %}
+
+          <!-- {% if post.cover %}
+          <div class="post-thumbnail">
+            <a href="{{ post.url }}">
+              <img src="{{ post.cover }}" alt="Cover image for {{ post.title }}">
+            </a>
+          </div>
+          {% endif %} -->
         </div>
-      {% endif %}
+      </div>
       </article>
   {% endfor %}
 </div>
