@@ -4,6 +4,7 @@ title: "北京的冬天"
 date: 2025-09-20
 cover: /assets/images/beijing/IMG_1717.webp
 blurb: ""
+tags: [personal]
 ---
 
 <div class="carousel-container">

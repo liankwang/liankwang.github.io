@@ -11,9 +11,24 @@ description: ""
 <h1>Squib City (v0.1) </h1>
 <!-- Insert this in h1 to get the [back] button: -->
 <!-- <span class="small"> <a href="../">[back]</a> </span> -->
+
+<!-- TAG BUTTONS -->
+<div id="tag-filters">
+  {% assign tags = site.tags | sort %}
+  {% for tag in tags %}
+    <a href="#"
+       class="tag-link"
+       data-tag="{{ tag[0] }}">
+      [{{ tag[0] }}]
+    </a>
+  {% endfor %}
+</div>
+
 <div class="posts">
   {% for post in site.posts %}
-    <article class="post">
+    <article class="post post-item"
+         data-tags="{{ post.tags | default: empty | join: ' ' }}">
+
         <!-- OPTION 1: Everything stacked -->
         <!-- <div class="post-body stacked">
           <div class="post-title">
@@ -41,12 +56,12 @@ description: ""
       <!-- OPTION 2: Date on left, text on right -->
       <div class="post-body columns">
         <div class="post-date-column">
-          <div class="post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
+          <div class="post-date">{{ post.date | date: "%Y-%m-%d" }}</div>
         </div>
 
         <div class="post-info-column">
           <div class="post-title">
-            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <a href="{{ post.url }}">{{ post.title }}</a>
           </div>
 
           {% if post.blurb != "" %}
@@ -68,3 +83,38 @@ description: ""
   {% endfor %}
 </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const tagLinks = document.querySelectorAll('.tag-link');
+  const posts = document.querySelectorAll('.post-item');
+
+  function applyFilter() {
+    const activeTags = Array.from(tagLinks)
+      .filter(link => link.classList.contains('active'))
+      .map(link => link.dataset.tag);
+
+    posts.forEach(post => {
+      const postTags = post.dataset.tags.split(' ');
+
+      // show all if nothing selected
+      if (activeTags.length === 0) {
+        post.style.display = '';
+        return;
+      }
+
+      // OR logic: match any active tag
+      const matches = activeTags.some(tag => postTags.includes(tag));
+      post.style.display = matches ? '' : 'none';
+    });
+  }
+
+  tagLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      link.classList.toggle('active');
+      applyFilter();
+    });
+  });
+});
+</script>
