@@ -34,12 +34,20 @@ p {
 }
 
   a {
+    /* color: #777; */
     color: #0e5e06;
     text-decoration: none;
   } 
   a:hover {
+    /* color: #146B0F; */
     text-decoration: underline;
   } 
+
+  .paper-link {
+  /* float: right; */
+  /* color: #777;
+  text-decoration: none; */
+  }
 
   .section {
     width: 100%; /* Full width for each section */

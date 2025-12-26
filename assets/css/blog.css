@@ -16,18 +16,47 @@ main {
   }
 
 h1 {
-  margin-bottom: 0.5rem;
+  /* margin-top: 1em; */
+  margin-bottom: 0.875em;
+}
+
+a {
+  color: #333;
+}
+
+a:hover {
+  color: #146B0F; /* green */
+  text-decoration: none; /* ensure no underline */
+}
+
+.tag-link {
+  margin-right: 0.35em;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: #777;
+  cursor: pointer;
+  /* transition: color 0.15s ease; */
+}
+
+.tag-link:hover {
+  color: #333;
+}
+
+.tag-link.active {
+  font-weight: bold;
+  color: #333;
+  /* color: #146B0F; */
 }
 
 
 .posts {
   width: 100%;
-  margin-top: 2em; 
-  margin-bottom: 2em;
+  margin-top: 0.5em; 
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
+  gap: 0.25em;
 }
 
 .post {
@@ -37,8 +66,8 @@ h1 {
 
 /* Shared */
 .post-date {
-  font-size: 1rem;
-  color: #444;
+  font-size: 0.875rem;
+  color: #777;
   /* margin-bottom: 0.25rem; */
 }
 
@@ -89,13 +118,13 @@ h1 {
 /* Post columns layout */
 .post-body.columns {
   display: flex;
-  gap: 1.6em;
+  /* gap: 1.6em; */
   align-items: flex-start;
 }
 
 .post-date-column {
   flex: 0 0 100px;
-  text-align: left;
+  text-align: right;
   color: #555;
   padding-top: 4px;
 }
@@ -148,20 +177,4 @@ h1 {
   .post-date-column + .post-title-column {
     margin-top: 0; /* ensure no vertical gap */
   }
-}
-
-.tag-link {
-  margin-right: 0.5em;
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
-  /* color: inherit; */
-  cursor: pointer;
-}
-
-.tag-link:hover {
-  text-decoration: underline;
-}
-
-.tag-link.active {
-  font-weight: bold;
 }

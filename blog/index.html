@@ -55,10 +55,7 @@ description: ""
 
       <!-- OPTION 2: Date on left, text on right -->
       <div class="post-body columns">
-        <div class="post-date-column">
-          <div class="post-date">{{ post.date | date: "%Y-%m-%d" }}</div>
-        </div>
-
+        
         <div class="post-info-column">
           <div class="post-title">
             <a href="{{ post.url }}">{{ post.title }}</a>
@@ -77,6 +74,10 @@ description: ""
             </a>
           </div>
           {% endif %} -->
+        </div>
+
+        <div class="post-date-column">
+          <div class="post-date">{{ post.date | date: "%Y-%m-%d" }}</div>
         </div>
       </div>
       </article>
