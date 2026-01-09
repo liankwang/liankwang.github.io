@@ -49,37 +49,7 @@ tags: [personal]
     </div>
     <a class="next"></a>
 </div>
-<!-- 
-<div class="carousel-container">
-    <div class="carousel-track">
-        <div class="carousel-slide">
-            <div class="photo-row">
-                <img src="/assets/images/beijing/IMG_2416.webp">
-                <img src="/assets/images/beijing/IMG_9995.webp ">
-            </div>
-            <p class="caption"> 蓝瓦与天 </p>
-        </div>
-    </div>
-    </div>
-    <a class="next"></a>
-</div> -->
 
-<!-- <div class="carousel-container">
-    <div class="carousel-track">
-        <div class="carousel-slide">
-            <img src="/assets/images/beijing/IMG_2349.webp">
-            <p class="caption"> 空、灰、枯 </p>
-        </div>
-        <div class="carousel-slide">
-            <img src="/assets/images/beijing/IMG_9976.webp ">
-        </div>
-        <div class="carousel-slide">
-            <img src="/assets/images/beijing/IMG_1708.webp ">
-        </div>
-    </div>
-    </div>
-    <a class="next"></a>
-</div> -->
 
 <div class="carousel-container">
     <a class="prev"></a>
@@ -120,7 +90,6 @@ tags: [personal]
 </div>
 
 
-
 <div class="carousel-container">
     <a class="prev"></a>
     <div class="carousel-inner">
@@ -138,7 +107,7 @@ tags: [personal]
                 <!-- <img src="/assets/images/beijing/IMG_9976.webp "> -->
                 <img src="/assets/images/beijing/IMG_1708.webp ">
             </div>
-            <p class="caption"> 空、灰、枯 </p>
+            <p class="caption"> 空灰与枯 </p>
         </div>
         <div class="carousel-slide">
             <img src="/assets/images/beijing/IMG_1717.webp">
@@ -159,38 +128,16 @@ tags: [personal]
                 <img src="/assets/images/beijing/IMG_2252.webp">
                 <img src="/assets/images/beijing/IMG_0995.webp">
             </div>
-            <p class="caption"> 冷阳昏沉，令人随时想倒身睡去</p>
+            <p class="caption"> 冷阳昏沉，昏昏欲睡</p>
         </div>
         <div class="carousel-slide">
             <img src="/assets/images/beijing/IMG_4997.webp">
-            <p class="caption"> 吃驴肉火烧往往是小朋友最幸福的时候</p>
+            <p class="caption"> 吃驴肉火烧是小朋友们最幸福的时候</p>
         </div>
     </div>
     </div>
     <a class="next"></a>
 </div>
-<!-- 
-<div class="carousel-container">
-    <div class="carousel-track">
-        <div class="carousel-slide">
-            <img src="/assets/images/beijing/IMG_2252.webp ">
-            <p class="caption"> 冬天的长城也很应景 </p>
-        </div>
-        <div class="carousel-slide">
-            <img src="/assets/images/beijing/IMG_2275.webp ">
-        </div>
-        <div class="carousel-slide">
-            <img src="/assets/images/beijing/IMG_0995.webp">
-            <p class="caption"> 冷阳昏沉，让人随时想倒身睡去</p>
-        </div>
-        <div class="carousel-slide">
-            <img src="/assets/images/beijing/IMG_4997.webp">
-            <p class="caption"> 吃驴肉火烧往往是小朋友最幸福的时候</p>
-        </div>
-    </div>
-    </div>
-    <a class="next"></a>
-</div> -->
 
 <div class="carousel-container">
     <a class="prev"></a>
@@ -209,7 +156,7 @@ tags: [personal]
                 <img src="/assets/images/beijing/IMG_2334.webp">
                 <img src="/assets/images/beijing/IMG_2289.webp">
             </div>
-            <p class="caption"> 分享童年的回忆 </p>
+            <p class="caption"> 分享童年 </p>
         </div>
         <div class="carousel-slide">
             <div class="photo-row">
@@ -296,7 +243,10 @@ tags: [personal]
     <div class="carousel-track">
         <div class="carousel-slide">
             <img src="/assets/images/beijing/IMG_1863.webp">
-            <p class="caption"> 山映斜阳天接水，芳草无情，更在斜阳外 </p>
+            <p class="caption">
+            山映斜阳天接水<br>
+            芳草无情，更在斜阳外
+            </p>
         </div>
         <div class="carousel-slide">
             <img src="/assets/images/beijing/IMG_1829.webp ">

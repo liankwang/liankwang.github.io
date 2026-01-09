@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Research interests"
-date: 2025-11-19
+title: "My system"
+# cover: /assets/images/japan2025/IMG_7279.webp
 blurb: ""
-tags: [personal]
 ---
+
+[Layout still needs to be changed; right now just uses blog post layout]
 
 My overarching goal is to develop an understanding of language as a whole, stitching together the various components of the system that are usually studied in isolation. My current research interests can be categorized into two main lines of inquiry: language learning and change.
 

@@ -2,5 +2,11 @@ title: "Lian Wang"
 description: ""
 url: "https://liankwang.github.io/"
 baseurl: ""
+
 plugins:
-- jekyll-sitemap
+  - jekyll-sitemap
+
+collections:
+  supplements:
+    output: true
+    permalink: /supplements/:name/

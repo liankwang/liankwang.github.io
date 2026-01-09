@@ -42,6 +42,13 @@
   line-height: 1.5;
 }
 
+.caption {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
 /* Single slide styles (matches carousel formatting) */
 .single-slide {
     display: flex;
