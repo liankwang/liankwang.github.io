@@ -1,7 +1,7 @@
 _site/
 assets/images/.DS_Store
 assets/images_unused/
-.DS_Store
+*.DS_Store
 _posts/drafts/
 assets/scripts.txt
 
