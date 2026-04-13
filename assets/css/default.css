@@ -13,7 +13,7 @@
   main {
     max-width: 700px;
     margin: 0 auto; /* centers the column */
-    padding: 3rem 3rem;
+    padding: 3rem 1rem;
     box-sizing: border-box;
   }
 

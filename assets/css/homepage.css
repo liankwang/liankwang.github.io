@@ -14,6 +14,15 @@
     margin: 20px 8px 8px;
   }
 
+  .profile-text a {
+    display: inline-block;
+    /* margin-top: 0.25em; */
+  }
+
+  .profile-text h1 {
+    margin-bottom: .5em;
+  }
+
   .profile img {
     width: 200px;
     max-width: 100%;
