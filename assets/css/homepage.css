@@ -16,7 +16,7 @@
 
   .profile-text a {
     display: inline-block;
-    /* margin-top: 0.25em; */
+    margin-bottom: 1em;
   }
 
   .profile-text h1 {
